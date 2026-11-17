@@ -1,0 +1,24 @@
+# Data: the challenge dataset is not redistributed (see data/README.md)
+data/raw/*
+data/interim/*
+data/processed/*
+data/bi/*
+!data/**/.gitkeep
+!data/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+build/

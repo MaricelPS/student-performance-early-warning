@@ -1,0 +1,31 @@
+# Central configuration for the pipeline. Every CLI command reads this file.
+paths:
+  raw_csv: data/raw/challenge_edMachina.csv
+  interim_dir: data/interim        # cleaned, normalized tables (parquet)
+  processed_dir: data/processed    # feature matrices per cutoff (parquet)
+  models_dir: models
+  metrics_dir: reports/metrics
+  bi_dir: data/bi                  # star-schema CSVs for Power BI
+
+data:
+  csv_separator: ";"
+  pass_threshold: 5.0              # nota_final_materia >= 5 means "approved"
+  # Final grade 0 co-occurs with good partial-exam grades -> most likely "absent"
+  # rather than a real grade. These enrollments are excluded from training.
+  exclude_zero_final_grade: true
+
+features:
+  # Prediction horizons (course day, 1..60). Features at cutoff c use only
+  # events with particion < c, i.e. information available by day c.
+  cutoffs: [15, 30, 45, 60]
+  low_score_threshold: 60          # submissions scored below this count as "low"
+  recent_window_days: 7
+
+training:
+  random_state: 42
+  test_size: 0.2                   # grouped by student (user_uuid)
+  cv_folds: 5
+  cv_repeats: 3
+  tuning_iterations: 25
+  target_recall: 0.80              # operating point for the "at risk" alert
+  n_bootstrap: 1000                # bootstrap resamples for test-set CIs

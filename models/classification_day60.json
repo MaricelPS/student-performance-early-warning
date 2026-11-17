@@ -1,0 +1,91 @@
+{
+  "cutoff": 60,
+  "task": "classification",
+  "selected_model": "lightgbm_tuned",
+  "n_train": 2371,
+  "n_test": 593,
+  "n_failed_train": 125,
+  "n_failed_test": 31,
+  "lightgbm_params": {
+    "class_weight": null,
+    "colsample_bytree": 0.5384899549143964,
+    "learning_rate": 0.02382184154464129,
+    "min_child_samples": 37,
+    "n_estimators": 165,
+    "num_leaves": 13,
+    "reg_lambda": 1.7079750342958235,
+    "subsample": 0.8533615026041694,
+    "subsample_freq": 1
+  },
+  "operating_point_test": {
+    "threshold": 0.09455522682464267,
+    "precision": 0.323943661971831,
+    "recall": 0.7419354838709677,
+    "f1": 0.45098039215686275,
+    "alert_rate": 0.11973018549747048
+  },
+  "prevalence_test": 0.05227655986509275,
+  "test_metrics": {
+    "pr_auc": {
+      "estimate": 0.5008880536596985,
+      "ci95": [
+        0.32037734981889815,
+        0.7457858197928272
+      ]
+    },
+    "roc_auc": {
+      "estimate": 0.942888302146711,
+      "ci95": [
+        0.9020137848292615,
+        0.9756679840220184
+      ]
+    },
+    "brier": {
+      "estimate": 0.032223428399592385,
+      "ci95": [
+        0.018679540740546806,
+        0.04633551448981814
+      ]
+    }
+  },
+  "features": [
+    "n_courses_in_period",
+    "course_size",
+    "n_submissions",
+    "n_assignments_seen",
+    "submission_rate",
+    "active_days",
+    "days_since_last_activity",
+    "recent_submissions",
+    "n_ungraded",
+    "share_quiz",
+    "share_upload",
+    "share_external",
+    "mean_score",
+    "min_score",
+    "std_score",
+    "share_low_score",
+    "last_score",
+    "median_hours_before_due",
+    "share_last_24h",
+    "n_exams",
+    "grade_P1",
+    "grade_P2",
+    "grade_R1",
+    "grade_R2",
+    "grade_INT",
+    "took_R1",
+    "took_R2",
+    "best_first_partial",
+    "best_second_partial",
+    "mean_exam_grade",
+    "min_exam_grade",
+    "any_exam_below_pass"
+  ],
+  "threshold": 0.09455522682464267,
+  "pass_threshold": 5.0,
+  "trained_at": "2026-11-16T12:36:07+00:00",
+  "package_version": "1.0.0",
+  "sklearn_version": "1.9.1",
+  "python": "3.13.18"
+}

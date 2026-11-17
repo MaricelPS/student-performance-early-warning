@@ -1,0 +1,360 @@
+[
+  {
+    "cutoff": 15,
+    "task": "classification",
+    "selected_model": "lightgbm_tuned",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "lightgbm_params": {
+      "class_weight": null,
+      "colsample_bytree": 0.5066324805799333,
+      "learning_rate": 0.16820261606177922,
+      "min_child_samples": 23,
+      "n_estimators": 341,
+      "num_leaves": 29,
+      "reg_lambda": 0.01653693718282442,
+      "subsample": 0.6390688456025535,
+      "subsample_freq": 1
+    },
+    "operating_point_test": {
+      "threshold": 0.04280294930729389,
+      "precision": 0.06553398058252427,
+      "recall": 0.8709677419354839,
+      "f1": 0.12189616252821671,
+      "alert_rate": 0.6947723440134908
+    },
+    "prevalence_test": 0.05227655986509275,
+    "test_metrics": {
+      "pr_auc": {
+        "estimate": 0.07039626022327022,
+        "ci95": [
+          0.04411845691266295,
+          0.11743373670857354
+        ]
+      },
+      "roc_auc": {
+        "estimate": 0.6258179313511651,
+        "ci95": [
+          0.5252836746993147,
+          0.7162617014003525
+        ]
+      },
+      "brier": {
+        "estimate": 0.04917460810291139,
+        "ci95": [
+          0.031605088469391654,
+          0.06885048698435689
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 15,
+    "task": "regression",
+    "selected_model": "lightgbm_tuned",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "lightgbm_params": {
+      "colsample_bytree": 0.5852620618436457,
+      "learning_rate": 0.012151617026673379,
+      "min_child_samples": 13,
+      "n_estimators": 188,
+      "num_leaves": 31,
+      "reg_lambda": 0.17912362571043663,
+      "subsample": 0.7541666010159664,
+      "subsample_freq": 1
+    },
+    "test_metrics": {
+      "mae": {
+        "estimate": 1.2981305340014742,
+        "ci95": [
+          1.196224379260073,
+          1.405508939898033
+        ]
+      },
+      "rmse": {
+        "estimate": 1.6415682148832866,
+        "ci95": [
+          1.5057648803682413,
+          1.7759966920363324
+        ]
+      },
+      "r2": {
+        "estimate": 0.06696913419303385,
+        "ci95": [
+          0.016889834814565165,
+          0.10585495452739825
+        ]
+      },
+      "pr_auc_from_grade": {
+        "estimate": 0.08908047713210356,
+        "ci95": [
+          0.047634937610001045,
+          0.1827134068552421
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 30,
+    "task": "classification",
+    "selected_model": "logistic_regression",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "operating_point_test": {
+      "threshold": 0.045761789770487685,
+      "precision": 0.08571428571428572,
+      "recall": 0.7741935483870968,
+      "f1": 0.15434083601286175,
+      "alert_rate": 0.47217537942664417
+    },
+    "prevalence_test": 0.05227655986509275,
+    "test_metrics": {
+      "pr_auc": {
+        "estimate": 0.14970417774245895,
+        "ci95": [
+          0.08355559056900327,
+          0.2778765672869917
+        ]
+      },
+      "roc_auc": {
+        "estimate": 0.7334978762484214,
+        "ci95": [
+          0.6641643306636157,
+          0.8060715219788485
+        ]
+      },
+      "brier": {
+        "estimate": 0.047908720750275996,
+        "ci95": [
+          0.03124280668500562,
+          0.06711193859087196
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 30,
+    "task": "regression",
+    "selected_model": "lightgbm_tuned",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "lightgbm_params": {
+      "colsample_bytree": 0.5127095633720475,
+      "learning_rate": 0.013815607382950859,
+      "min_child_samples": 72,
+      "n_estimators": 451,
+      "num_leaves": 10,
+      "reg_lambda": 0.07970414230898702,
+      "subsample": 0.8253102287905535,
+      "subsample_freq": 1
+    },
+    "test_metrics": {
+      "mae": {
+        "estimate": 1.0552889263637073,
+        "ci95": [
+          0.9592538276053337,
+          1.1451132311436703
+        ]
+      },
+      "rmse": {
+        "estimate": 1.4211050829884508,
+        "ci95": [
+          1.2839722646864513,
+          1.5487646463586273
+        ]
+      },
+      "r2": {
+        "estimate": 0.30075313522017577,
+        "ci95": [
+          0.20790272340882185,
+          0.3844766708945015
+        ]
+      },
+      "pr_auc_from_grade": {
+        "estimate": 0.1518420782817487,
+        "ci95": [
+          0.0869421707294444,
+          0.2658862010162182
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 45,
+    "task": "classification",
+    "selected_model": "logistic_regression",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "operating_point_test": {
+      "threshold": 0.0634537291141164,
+      "precision": 0.17266187050359713,
+      "recall": 0.7741935483870968,
+      "f1": 0.2823529411764706,
+      "alert_rate": 0.23440134907251264
+    },
+    "prevalence_test": 0.05227655986509275,
+    "test_metrics": {
+      "pr_auc": {
+        "estimate": 0.2772068141682429,
+        "ci95": [
+          0.16491370041603406,
+          0.42231726646796014
+        ]
+      },
+      "roc_auc": {
+        "estimate": 0.8654000688784296,
+        "ci95": [
+          0.812458020655317,
+          0.9105728885113392
+        ]
+      },
+      "brier": {
+        "estimate": 0.043987029676774425,
+        "ci95": [
+          0.028945142174362247,
+          0.06089502112608598
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 45,
+    "task": "regression",
+    "selected_model": "random_forest",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "test_metrics": {
+      "mae": {
+        "estimate": 0.7360302897308635,
+        "ci95": [
+          0.6462149617716442,
+          0.8252845474592796
+        ]
+      },
+      "rmse": {
+        "estimate": 1.1420239881646095,
+        "ci95": [
+          1.0112537487666768,
+          1.2640583833954169
+        ]
+      },
+      "r2": {
+        "estimate": 0.5484263473305497,
+        "ci95": [
+          0.4637489040774184,
+          0.6237598763609153
+        ]
+      },
+      "pr_auc_from_grade": {
+        "estimate": 0.19019687508875038,
+        "ci95": [
+          0.10972275910872752,
+          0.295012238730242
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 60,
+    "task": "classification",
+    "selected_model": "lightgbm_tuned",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "lightgbm_params": {
+      "class_weight": null,
+      "colsample_bytree": 0.5384899549143964,
+      "learning_rate": 0.02382184154464129,
+      "min_child_samples": 37,
+      "n_estimators": 165,
+      "num_leaves": 13,
+      "reg_lambda": 1.7079750342958235,
+      "subsample": 0.8533615026041694,
+      "subsample_freq": 1
+    },
+    "operating_point_test": {
+      "threshold": 0.09455522682464267,
+      "precision": 0.323943661971831,
+      "recall": 0.7419354838709677,
+      "f1": 0.45098039215686275,
+      "alert_rate": 0.11973018549747048
+    },
+    "prevalence_test": 0.05227655986509275,
+    "test_metrics": {
+      "pr_auc": {
+        "estimate": 0.5008880536596985,
+        "ci95": [
+          0.32037734981889815,
+          0.7457858197928272
+        ]
+      },
+      "roc_auc": {
+        "estimate": 0.942888302146711,
+        "ci95": [
+          0.9020137848292615,
+          0.9756679840220184
+        ]
+      },
+      "brier": {
+        "estimate": 0.032223428399592385,
+        "ci95": [
+          0.018679540740546806,
+          0.04633551448981814
+        ]
+      }
+    }
+  },
+  {
+    "cutoff": 60,
+    "task": "regression",
+    "selected_model": "random_forest",
+    "n_train": 2371,
+    "n_test": 593,
+    "n_failed_train": 125,
+    "n_failed_test": 31,
+    "test_metrics": {
+      "mae": {
+        "estimate": 0.3148400127968687,
+        "ci95": [
+          0.23664142691388446,
+          0.39436451186329335
+        ]
+      },
+      "rmse": {
+        "estimate": 0.7442642749946504,
+        "ci95": [
+          0.563805406290615,
+          0.9058840282340956
+        ]
+      },
+      "r2": {
+        "estimate": 0.8082071165440289,
+        "ci95": [
+          0.7178477903683321,
+          0.8801541963615402
+        ]
+      },
+      "pr_auc_from_grade": {
+        "estimate": 0.45990544136049005,
+        "ci95": [
+          0.26893363073381216,
+          0.6883940914183376
+        ]
+      }
+    }
+  }
+]

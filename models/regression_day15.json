@@ -1,0 +1,89 @@
+{
+  "cutoff": 15,
+  "task": "regression",
+  "selected_model": "lightgbm_tuned",
+  "n_train": 2371,
+  "n_test": 593,
+  "n_failed_train": 125,
+  "n_failed_test": 31,
+  "lightgbm_params": {
+    "colsample_bytree": 0.5852620618436457,
+    "learning_rate": 0.012151617026673379,
+    "min_child_samples": 13,
+    "n_estimators": 188,
+    "num_leaves": 31,
+    "reg_lambda": 0.17912362571043663,
+    "subsample": 0.7541666010159664,
+    "subsample_freq": 1
+  },
+  "test_metrics": {
+    "mae": {
+      "estimate": 1.2981305340014742,
+      "ci95": [
+        1.196224379260073,
+        1.405508939898033
+      ]
+    },
+    "rmse": {
+      "estimate": 1.6415682148832866,
+      "ci95": [
+        1.5057648803682413,
+        1.7759966920363324
+      ]
+    },
+    "r2": {
+      "estimate": 0.06696913419303385,
+      "ci95": [
+        0.016889834814565165,
+        0.10585495452739825
+      ]
+    },
+    "pr_auc_from_grade": {
+      "estimate": 0.08908047713210356,
+      "ci95": [
+        0.047634937610001045,
+        0.1827134068552421
+      ]
+    }
+  },
+  "features": [
+    "n_courses_in_period",
+    "course_size",
+    "n_submissions",
+    "n_assignments_seen",
+    "submission_rate",
+    "active_days",
+    "days_since_last_activity",
+    "recent_submissions",
+    "n_ungraded",
+    "share_quiz",
+    "share_upload",
+    "share_external",
+    "mean_score",
+    "min_score",
+    "std_score",
+    "share_low_score",
+    "last_score",
+    "median_hours_before_due",
+    "share_last_24h",
+    "n_exams",
+    "grade_P1",
+    "grade_P2",
+    "grade_R1",
+    "grade_R2",
+    "grade_INT",
+    "took_R1",
+    "took_R2",
+    "best_first_partial",
+    "best_second_partial",
+    "mean_exam_grade",
+    "min_exam_grade",
+    "any_exam_below_pass"
+  ],
+  "threshold": null,
+  "pass_threshold": 5.0,
+  "trained_at": "2026-11-16T12:31:56+00:00",
+  "package_version": "1.0.0",
+  "sklearn_version": "1.9.1",
+  "python": "3.13.18"
+}

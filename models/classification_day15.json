@@ -1,0 +1,91 @@
+{
+  "cutoff": 15,
+  "task": "classification",
+  "selected_model": "lightgbm_tuned",
+  "n_train": 2371,
+  "n_test": 593,
+  "n_failed_train": 125,
+  "n_failed_test": 31,
+  "lightgbm_params": {
+    "class_weight": null,
+    "colsample_bytree": 0.5066324805799333,
+    "learning_rate": 0.16820261606177922,
+    "min_child_samples": 23,
+    "n_estimators": 341,
+    "num_leaves": 29,
+    "reg_lambda": 0.01653693718282442,
+    "subsample": 0.6390688456025535,
+    "subsample_freq": 1
+  },
+  "operating_point_test": {
+    "threshold": 0.04280294930729389,
+    "precision": 0.06553398058252427,
+    "recall": 0.8709677419354839,
+    "f1": 0.12189616252821671,
+    "alert_rate": 0.6947723440134908
+  },
+  "prevalence_test": 0.05227655986509275,
+  "test_metrics": {
+    "pr_auc": {
+      "estimate": 0.07039626022327022,
+      "ci95": [
+        0.04411845691266295,
+        0.11743373670857354
+      ]
+    },
+    "roc_auc": {
+      "estimate": 0.6258179313511651,
+      "ci95": [
+        0.5252836746993147,
+        0.7162617014003525
+      ]
+    },
+    "brier": {
+      "estimate": 0.04917460810291139,
+      "ci95": [
+        0.031605088469391654,
+        0.06885048698435689
+      ]
+    }
+  },
+  "features": [
+    "n_courses_in_period",
+    "course_size",
+    "n_submissions",
+    "n_assignments_seen",
+    "submission_rate",
+    "active_days",
+    "days_since_last_activity",
+    "recent_submissions",
+    "n_ungraded",
+    "share_quiz",
+    "share_upload",
+    "share_external",
+    "mean_score",
+    "min_score",
+    "std_score",
+    "share_low_score",
+    "last_score",
+    "median_hours_before_due",
+    "share_last_24h",
+    "n_exams",
+    "grade_P1",
+    "grade_P2",
+    "grade_R1",
+    "grade_R2",
+    "grade_INT",
+    "took_R1",
+    "took_R2",
+    "best_first_partial",
+    "best_second_partial",
+    "mean_exam_grade",
+    "min_exam_grade",
+    "any_exam_below_pass"
+  ],
+  "threshold": 0.04280294930729389,
+  "pass_threshold": 5.0,
+  "trained_at": "2026-11-16T12:31:24+00:00",
+  "package_version": "1.0.0",
+  "sklearn_version": "1.9.1",
+  "python": "3.13.18"
+}

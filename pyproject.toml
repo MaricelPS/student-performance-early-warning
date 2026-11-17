@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "early-warning"
+version = "1.0.0"
+description = "Early-warning system for student course outcomes: data cleaning, feature engineering, model comparison and a FastAPI serving layer."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "María Pérez Schmit" }]
+dependencies = [
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "lightgbm>=4.1",
+    "joblib>=1.3",
+    "pyyaml>=6.0",
+    "pydantic>=2.5",
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+]
+
+[project.optional-dependencies]
+analysis = [
+    "scipy>=1.11",
+    "statsmodels>=0.14",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "jupyter>=1.0",
+    "nbconvert>=7.0",
+    "pyarrow>=14.0",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "httpx>=0.26",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+early-warning = "early_warning.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*" = ["E402", "B018"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

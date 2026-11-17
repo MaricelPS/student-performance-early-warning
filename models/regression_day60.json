@@ -1,0 +1,79 @@
+{
+  "cutoff": 60,
+  "task": "regression",
+  "selected_model": "random_forest",
+  "n_train": 2371,
+  "n_test": 593,
+  "n_failed_train": 125,
+  "n_failed_test": 31,
+  "test_metrics": {
+    "mae": {
+      "estimate": 0.3148400127968687,
+      "ci95": [
+        0.23664142691388446,
+        0.39436451186329335
+      ]
+    },
+    "rmse": {
+      "estimate": 0.7442642749946504,
+      "ci95": [
+        0.563805406290615,
+        0.9058840282340956
+      ]
+    },
+    "r2": {
+      "estimate": 0.8082071165440289,
+      "ci95": [
+        0.7178477903683321,
+        0.8801541963615402
+      ]
+    },
+    "pr_auc_from_grade": {
+      "estimate": 0.45990544136049005,
+      "ci95": [
+        0.26893363073381216,
+        0.6883940914183376
+      ]
+    }
+  },
+  "features": [
+    "n_courses_in_period",
+    "course_size",
+    "n_submissions",
+    "n_assignments_seen",
+    "submission_rate",
+    "active_days",
+    "days_since_last_activity",
+    "recent_submissions",
+    "n_ungraded",
+    "share_quiz",
+    "share_upload",
+    "share_external",
+    "mean_score",
+    "min_score",
+    "std_score",
+    "share_low_score",
+    "last_score",
+    "median_hours_before_due",
+    "share_last_24h",
+    "n_exams",
+    "grade_P1",
+    "grade_P2",
+    "grade_R1",
+    "grade_R2",
+    "grade_INT",
+    "took_R1",
+    "took_R2",
+    "best_first_partial",
+    "best_second_partial",
+    "mean_exam_grade",
+    "min_exam_grade",
+    "any_exam_below_pass"
+  ],
+  "threshold": null,
+  "pass_threshold": 5.0,
+  "trained_at": "2026-11-16T12:37:07+00:00",
+  "package_version": "1.0.0",
+  "sklearn_version": "1.9.1",
+  "python": "3.13.18"
+}
